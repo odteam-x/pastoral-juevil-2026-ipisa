@@ -6,18 +6,18 @@
 
 /* ── CUSTOM PROPERTIES ──────────────────────────────────────── */
 :root {
-  /* Blues */
-  --blue-950:  #0a1628;
-  --blue-900:  #0f2140;
-  --blue-800:  #1a3561;
-  --blue-700:  #1e4080;
-  --blue-600:  #2454a4;
-  --blue-500:  #2563eb;
-  --blue-400:  #3b82f6;
-  --blue-300:  #93c5fd;
-  --blue-200:  #bfdbfe;
-  --blue-100:  #dbeafe;
-  --blue-50:   #eff6ff;
+  /* Blues — matched to logo's cyan-blue (#5BB8D4) */
+  --blue-950:  #071c24;
+  --blue-900:  #0e313f;
+  --blue-800:  #164d62;
+  --blue-700:  #1e6880;
+  --blue-600:  #2e8fad;
+  --blue-500:  #5bb8d4;
+  --blue-400:  #7ecde3;
+  --blue-300:  #a5dde8;
+  --blue-200:  #c5ecf3;
+  --blue-100:  #dff5fa;
+  --blue-50:   #eef9fc;
 
   /* Cream */
   --cream-50:  #fffdf9;
@@ -36,9 +36,9 @@
   --text-muted:     #8898b0;
 
   /* Category colors */
-  --cat-ipisa:     #2563eb;
+  --cat-ipisa:     #2e8fad;
   --cat-ipidbosco: #7c3aed;
-  --cat-externo:   #0891b2;
+  --cat-externo:   #0e7a94;
 
   /* Radius */
   --r-sm:  8px;
@@ -104,7 +104,7 @@ img { max-width: 100%; display: block; }
 }
 .header-orb--1 {
   width: 380px; height: 380px;
-  background: radial-gradient(circle, var(--blue-300), transparent 70%);
+  background: radial-gradient(circle, var(--blue-400), transparent 70%);
   top: -120px; left: -80px;
   animation-delay: 0s;
 }
@@ -130,16 +130,23 @@ img { max-width: 100%; display: block; }
 }
 
 .header__logo {
-  width: 64px; height: 64px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.12);
-  backdrop-filter: blur(6px);
-  border: 1.5px solid rgba(255,255,255,.2);
+  width: 160px; height: 160px;
+  border-radius: var(--r-xl);
+  background: rgba(7, 28, 36, 0.55);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(91, 184, 212, 0.25);
   display: flex; align-items: center; justify-content: center;
-  font-size: 26px;
-  color: var(--cream-100);
-  box-shadow: 0 4px 24px rgba(0,0,0,.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,.35), 0 0 0 1px rgba(91,184,212,.12);
   animation: logoAppear .6s var(--t-slow) both;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.header__logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(91,184,212,.4));
 }
 
 @keyframes logoAppear {
@@ -829,7 +836,7 @@ img { max-width: 100%; display: block; }
 /* ── RESPONSIVE ──────────────────────────────────────────────── */
 @media (max-width: 640px) {
   .header { padding: 36px 0 32px; }
-  .header__logo { width: 52px; height: 52px; font-size: 20px; }
+  .header__logo { width: 120px; height: 120px; }
 
   .nav__tab { padding: 14px 16px; font-size: .85rem; }
   .nav__tab span { display: none; }
