@@ -10,8 +10,7 @@
 //    desplegada en Google Apps Script.
 //    Pasos: Apps Script → Implementar → Nueva implementación
 //           → Tipo: App web → Acceso: Cualquier persona
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwkE150ZRBKWch2JkMdyIH0UIaWI-whd18P5ZbsKewN9qtysD9Kvu0SlFqlXiwwiM0I/exec';
-
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxHw_DfjrIYsrBkM9tM4YoWb5J-BFwwg9DAMVJBnOttacLf4N5bORbQnz5uEPP6Ha30/exec';
 // Categorías y etiquetas
 const CATEGORY_LABELS = {
   IPISA:      'Estudiante IPISA',
